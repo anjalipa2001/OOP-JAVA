@@ -1,0 +1,73 @@
+import java.util.Scanner;
+class Addarray
+{
+int [][]a,b,c;
+void read()
+{
+  a = new int[2][2];
+  b = new int[2][2];
+  Scanner r= new Scanner(System.in);
+  System.out.println("Enter the elements into the First Array : ");
+  for(int i=0;i<2;i++)
+  {
+   for(int j=0;j<2;j++)
+   {
+     a[i][j]=r.nextInt();
+   }
+   System.out.println();
+  }
+  System.out.println("Second Array");
+  for(int i=0;i<2;i++)
+  {
+   for(int j=0;j<2;j++)
+   {
+     b[i][j]=r.nextInt();
+   }
+   System.out.println();
+  }
+}
+void print()
+{
+ System.out.println("2D Array Elements are : ");
+ for(int i=0;i<2;i++)
+ {
+  for(int j=0;j<2;j++)
+  {
+   System.out.print(a[i][j] + "\t");
+  }
+  System.out.println();
+ }
+ System.out.println("\t");
+ for(int i=0;i<2;i++)
+ {
+  for(int j=0;j<2;j++)
+  {
+   System.out.print(b[i][j] + "\t");
+  }
+  System.out.println();
+ }
+} 
+void sum()
+{
+  c = new int[2][2];
+  Scanner r= new Scanner(System.in);
+  System.out.println("Sum of Two Arrays : ");
+  for(int i=0;i<2;i++)
+  {
+   for(int j=0;j<2;j++)
+   {
+     c[i][j]=a[i][j]+b[i][j];
+	 System.out.print(c[i][j]+"\t");
+   }
+   System.out.println();
+  }	
+}
+public static void main(String args[])
+{
+	Addarray obj=new Addarray();
+	obj.read();
+	obj.print();
+	obj.sum();
+}
+}
+ 

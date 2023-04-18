@@ -1,0 +1,46 @@
+class Product
+{
+  int pcode,price;
+  String pname;
+  double lowest;
+  Product(int l,String m,int p)
+  {
+    pcode=l;
+	pname=m;
+	price=p;
+  }
+  void display()
+  {
+    System.out.println(pcode+"\t \t"+pname+"\t \t"+price);
+  }
+  static void lowest(double p1,double p2,double p3)
+  {
+	  if(p1<p2 && p1<p3)
+	  {
+		  System.out.println("\nProduct 1 have the Lowest price ");
+	  }
+	  else if(p2<p1 && p2<p1)
+	  {
+		  System.out.println("\nProduct 2 have the Lowest price ");
+	  }
+	  else
+	  {
+		  System.out.println("\nProduct 3 have the Lowest price ");
+	  }
+  }
+  public static void main(String args[])
+  {
+	Product p[]=new Product[3];
+    p[0]=new Product("TV",9,20000);
+	p[1]=new Product(102,"Oven",25000);
+    p[2]=new Product(103,"Grinder",5000);
+	System.out.println("\n\n\tPRODUCT INFORMATIONS\n\nPRODUCT CODE \t PRODUCT NAME \t PRICE \n");
+	p[0].display();
+	p[1].display();
+	p[2].display();
+	
+	lowest(p[0].price,p[1].price,p[2].price);
+  }
+}
+  
+    
