@@ -1,0 +1,72 @@
+import java.util.Scanner;
+class Symmetric
+{
+ int [][] a,b;
+ void read()
+ {
+   a = new int[2][2];
+   Scanner r= new Scanner(System.in);
+   System.out.println("Enter the elements into the  Array : ");
+   for(int i=0;i<2;i++)
+   {
+    for(int j=0;j<2;j++)
+    {
+     a[i][j]=r.nextInt();
+    }
+   System.out.println();
+   }
+  }
+  void print()
+  {
+    System.out.println("Array Elements are : ");
+    for(int i=0;i<2;i++)
+    {
+      for(int j=0;j<2;j++)
+      {
+        System.out.print(a[i][j] + "\t");
+      }
+     System.out.println();
+    }
+   }
+   void transpose()
+   {
+    int count=1;
+    b = new int[2][2];
+	System.out.println("Transpose of the Matrix : ");
+	for(int i=0;i<2;i++)
+	{
+	  for(int j=0;j<2;j++)
+	  {
+	    b[i][j]=a[j][i];
+		System.out.print(b[i][j]+"\t");
+      }
+     System.out.println();
+    }
+    for(int i=0;i<2;i++)
+	{
+	  for(int j=0;j<2;j++)
+	  {	
+	   if(a[i][j]!=b[i][j])
+	   {
+		count++;
+		break;
+	   }
+	  }
+	}
+	if(count==1)
+	 {
+		System.out.println("Symmetric");
+	 }
+	 else
+	 {
+		System.out.println("Not Symmetric");
+	 }		
+   } 
+public static void main(String args[])
+{
+	Symmetric obj=new Symmetric();
+	obj.read();
+	obj.print();
+	obj.transpose();
+}
+}
