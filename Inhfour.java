@@ -10,7 +10,7 @@ class Publisher
 class Book extends Publisher
 {
     String book;
-    Book(String publisher,String book)
+    Book(String book,String publisher)
 	{
         super(publisher);
         this.book=book;
@@ -19,9 +19,9 @@ class Book extends Publisher
 }
 class Literature extends Book
 {
-    Literature(String publisher, String book)
+    LiteratureString book,String publisher)
 	{
-        super(publisher, book);
+        super(book,publisher);
     }
     void display()
 	{
@@ -31,9 +31,9 @@ class Literature extends Book
 }
 class Fiction extends Book
 {
-    Fiction(String publisher, String book)
+    Fiction(String book,String publisher)
 	{
-        super(publisher, book);
+        super(book,publisher);
     }
     void display()
 	{
